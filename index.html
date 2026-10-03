@@ -3,13 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Andrea Coali</title>
+<title>Andrea Coali, Applied Economist</title>
 <meta name="description" content="Andrea Coali, applied economist. Chief Research Scientist at Cerved Group (ION Group) and Research Fellow at the ION Management Science Lab, SDA Bocconi.">
-<meta property="og:title" content="Andrea Coali">
+<link rel="canonical" href="https://andreacoali.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Andrea Coali">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Andrea Coali, Applied Economist">
 <meta property="og:description" content="Applied economist. Chief Research Scientist at Cerved Group (ION Group) and Research Fellow at SDA Bocconi.">
 <meta property="og:image" content="https://andreacoali.com/img/portrait.jpg">
+<meta property="og:image:width" content="590">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Portrait of Andrea Coali">
 <meta property="og:url" content="https://andreacoali.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Andrea Coali, Applied Economist">
+<meta name="twitter:description" content="Applied economist. Chief Research Scientist at Cerved Group (ION Group) and Research Fellow at SDA Bocconi.">
+<meta name="twitter:image" content="https://andreacoali.com/img/portrait.jpg">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1730" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313306b'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-weight='700' font-size='14' fill='%23ffffff' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -106,34 +120,25 @@ h1 { font-weight: 700; font-size: clamp(3rem, 8vw, 6.25rem); line-height: .95; l
 .cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
 .cols p { color: var(--slate); }
 
-/* publications */
-.pubs { list-style: none; margin: 0; padding: 0; }
-.pub { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
-.pub:first-child { padding-top: 0; }
-.pub .yr { font-variant-numeric: tabular-nums; font-size: 1.5rem; font-weight: 600; color: var(--navy); line-height: 1.2; }
-.pub h3 a { text-decoration: none; }
-.pub h3 a:hover { text-decoration: underline; }
-.pub .src { color: var(--slate); font-size: .95rem; margin-bottom: 10px; }
-.pub .src i { color: var(--ink); }
-.pub .abs { max-width: 62ch; }
-.award { display: inline-block; margin-top: 10px; font-size: .85rem; font-weight: 500; color: var(--navy); background: var(--sky); padding: 3px 10px; border-radius: 4px; }
+/* tiles: publications and talks */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.tile { display: flex; flex-direction: column; padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); color: inherit; text-decoration: none; transition: border-color .15s, background-color .15s; }
+a.tile:hover { border-color: var(--navy); background: color-mix(in srgb, var(--sky) 35%, var(--paper)); color: inherit; }
+.tile.wide { grid-column: 1 / -1; }
+.tile-top { display: flex; justify-content: space-between; gap: 12px; font-size: .9rem; margin-bottom: 12px; }
+.tile-top b { color: var(--navy); font-weight: 600; }
+.tile-top span { color: var(--slate); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tile h3 { font-size: 1.1rem; }
+.tile .src { color: var(--slate); font-size: .92rem; margin-bottom: 12px; }
+.tile .abs { font-size: .97rem; max-width: 70ch; }
+.tile .award { margin-top: auto; padding-top: 16px; }
+.award span { display: inline-block; font-size: .85rem; font-weight: 500; color: var(--navy); background: var(--sky); padding: 3px 10px; border-radius: 4px; }
 
 .plain { list-style: none; margin: 0; padding: 0; }
 .plain li { padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--slate); }
 .plain li:last-child { border-bottom: 0; }
 .plain .t { color: var(--ink); font-weight: 500; }
 
-/* talks & media */
-.media { list-style: none; margin: 0; padding: 0; }
-.media li { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; padding: 20px 0; border-bottom: 1px solid var(--line); }
-.media li:first-child { padding-top: 0; }
-.media li:last-child { border-bottom: 0; }
-.media .when { color: var(--slate); font-size: .95rem; }
-.media .kind { display: block; color: var(--navy); font-weight: 600; font-size: .9rem; }
-.media h3 a { text-decoration: none; }
-.media h3 a:hover { text-decoration: underline; }
-.media .outlet { color: var(--slate); font-size: .95rem; margin-bottom: 6px; }
-.media p:last-child { max-width: 62ch; }
 
 /* experience */
 details { border-bottom: 1px solid var(--line); }
@@ -179,12 +184,140 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--s
 }
 @media (max-width: 520px) {
   .wrap { padding: 0 16px; }
-  .pub { grid-template-columns: 1fr; gap: 4px; }
-  .media li { grid-template-columns: 1fr; gap: 4px; }
   summary { grid-template-columns: minmax(0, 1fr) 20px; }
   summary .yrs { grid-column: 1; grid-row: 2; }
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://andreacoali.com/#website",
+      "url": "https://andreacoali.com/",
+      "name": "Andrea Coali",
+      "publisher": { "@id": "https://andreacoali.com/#person" }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://andreacoali.com/#profilepage",
+      "url": "https://andreacoali.com/",
+      "name": "Andrea Coali, Applied Economist",
+      "isPartOf": { "@id": "https://andreacoali.com/#website" },
+      "mainEntity": { "@id": "https://andreacoali.com/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://andreacoali.com/#person",
+      "name": "Andrea Coali",
+      "url": "https://andreacoali.com/",
+      "image": "https://andreacoali.com/img/portrait.jpg",
+      "jobTitle": "Chief Research Scientist",
+      "nationality": { "@type": "Country", "name": "Italy" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milan",
+        "addressCountry": "IT"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Cerved Group",
+        "parentOrganization": { "@type": "Organization", "name": "ION Group" }
+      },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "ION Management Science Lab, SDA Bocconi"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Bocconi University" },
+        { "@type": "CollegeOrUniversity", "name": "University of Trento" }
+      ],
+      "knowsAbout": [
+        "Econometrics",
+        "Field experiments",
+        "Causal inference",
+        "Economic analysis",
+        "Machine learning",
+        "Generative AI",
+        "Entrepreneurship",
+        "Decision-making under uncertainty"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/andrea-coali/",
+        "https://scholar.google.com/citations?user=gJvQ_oQAAAAJ"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.70117",
+      "headline": "Entrepreneurship training and entrepreneurs' perceptions of ability: a randomized control trial in Tanzania",
+      "url": "https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.70117",
+      "datePublished": "2026",
+      "author": [
+        { "@type": "Person", "name": "F. Bacco" },
+        { "@id": "https://andreacoali.com/#person" },
+        { "@type": "Person", "name": "B. Wormald" }
+      ],
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Strategic Management Journal"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://pubsonline.informs.org/doi/full/10.1287/orsc.2023.17590",
+      "headline": "Does a theory-of-value add value? Evidence from a randomized control trial with Tanzanian entrepreneurs",
+      "url": "https://pubsonline.informs.org/doi/full/10.1287/orsc.2023.17590",
+      "datePublished": "2025",
+      "author": [
+        { "@type": "Person", "name": "R. Agarwal" },
+        { "@type": "Person", "name": "F. Bacco" },
+        { "@type": "Person", "name": "A. Camuffo" },
+        { "@id": "https://andreacoali.com/#person" },
+        { "@type": "Person", "name": "A. Gambardella" }
+      ],
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Organization Science"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1016/j.respol.2024.105022",
+      "headline": "Scientific decision-making, project selection and longer-term outcomes",
+      "url": "https://doi.org/10.1016/j.respol.2024.105022",
+      "datePublished": "2024",
+      "author": [
+        { "@id": "https://andreacoali.com/#person" },
+        { "@type": "Person", "name": "A. Gambardella" },
+        { "@type": "Person", "name": "C. Novelli" }
+      ],
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Research Policy"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1016/j.jbvd.2024.100023",
+      "headline": "A scientific approach to decision-making: key tools and design principles",
+      "url": "https://doi.org/10.1016/j.jbvd.2024.100023",
+      "datePublished": "2024",
+      "author": [
+        { "@id": "https://andreacoali.com/#person" },
+        { "@type": "Person", "name": "C. Novelli" },
+        { "@type": "Person", "name": "N. Sirigiri" },
+        { "@type": "Person", "name": "A. Spina" }
+      ],
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Journal of Business Venturing Design"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -215,7 +348,7 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--s
         <a href="https://scholar.google.com/citations?user=gJvQ_oQAAAAJ">Google Scholar</a>
       </div>
     </div>
-    <img class="portrait" src="img/portrait.jpg" width="590" height="640" alt="Portrait of Andrea Coali">
+    <img class="portrait" src="img/portrait.jpg" width="590" height="640" alt="Portrait of Andrea Coali" fetchpriority="high">
   </div>
 
   <figure class="figure" aria-labelledby="fig-title">
@@ -276,49 +409,39 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--s
   <section class="section" id="research">
     <h2>Research</h2>
     <div>
-      <ol class="pubs" reversed>
-        <li class="pub">
-          <div class="yr">2026</div>
-          <div>
-            <h3><a href="https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.70117">Entrepreneurship training and entrepreneurs' perceptions of ability: a randomized control trial in Tanzania</a></h3>
-            <p class="src">Bacco, Coali and Wormald, <i>Strategic Management Journal</i></p>
-            <p class="abs">In a field experiment with 151 Tanzanian entrepreneurs, training in a theory-and-evidence-based approach to decisions produced a larger and more persistent increase in self-perceived ability than an evidence-only approach.</p>
-            <span class="award">William F. Glueck Best Paper Award, Academy of Management 2023</span>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="yr">2025</div>
-          <div>
-            <h3><a href="https://pubsonline.informs.org/doi/full/10.1287/orsc.2023.17590">Does a theory-of-value add value? Evidence from a randomized control trial with Tanzanian entrepreneurs</a></h3>
-            <p class="src">Agarwal, Bacco, Camuffo, Coali, Gambardella et al., <i>Organization Science</i></p>
-            <p class="abs">Agribusiness entrepreneurs trained to build a theory of value before testing it achieved higher economic performance, because they made more coordinated changes to both core and operational parts of their business models.</p>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="yr">2024</div>
-          <div>
-            <h3><a href="https://doi.org/10.1016/j.respol.2024.105022">Scientific decision-making, project selection and longer-term outcomes</a></h3>
-            <p class="src">Coali, Gambardella and Novelli, <i>Research Policy</i></p>
-            <p class="abs">Across two randomised trials with 382 entrepreneurs, those trained in a scientific approach dropped weak projects earlier because they judged project value more accurately. Over five years they generated more ideas and launched more ventures.</p>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="yr">2024</div>
-          <div>
-            <h3><a href="https://doi.org/10.1016/j.jbvd.2024.100023">A scientific approach to decision-making: key tools and design principles</a></h3>
-            <p class="src">Coali, Novelli, Sirigiri and Spina, <i>Journal of Business Venturing Design</i></p>
-            <p class="abs">A practical account of the scientific approach to decisions: tools for theory building and evidence gathering, and design principles for developing new ones.</p>
-          </div>
-        </li>
-        <li class="pub">
-          <div class="yr">2026</div>
-          <div>
-            <h3>Introducing causal reasoning into entrepreneurial pedagogy and practice</h3>
-            <p class="src">Coali et al., in <i>Bayesian Entrepreneurship</i>, MIT Press</p>
-            <p class="abs">Book chapter on how causal reasoning can be taught to entrepreneurs and built into the way they make decisions.</p>
-          </div>
-        </li>
-      </ol>
+      <div class="tiles">
+        <a class="tile wide" href="https://sms.onlinelibrary.wiley.com/doi/abs/10.1002/smj.70117">
+          <div class="tile-top"><b>Strategic Management Journal</b><span>2026</span></div>
+          <h3>Entrepreneurship training and entrepreneurs' perceptions of ability: a randomized control trial in Tanzania</h3>
+          <p class="src">Bacco, Coali and Wormald</p>
+          <p class="abs">In a field experiment with 151 Tanzanian entrepreneurs, training in a theory-and-evidence-based approach to decisions produced a larger and more persistent increase in self-perceived ability than an evidence-only approach.</p>
+          <p class="award"><span>William F. Glueck Best Paper Award, Academy of Management 2023</span></p>
+        </a>
+        <a class="tile" href="https://pubsonline.informs.org/doi/full/10.1287/orsc.2023.17590">
+          <div class="tile-top"><b>Organization Science</b><span>2025</span></div>
+          <h3>Does a theory-of-value add value? Evidence from a randomized control trial with Tanzanian entrepreneurs</h3>
+          <p class="src">Agarwal, Bacco, Camuffo, Coali, Gambardella et al.</p>
+          <p class="abs">Agribusiness entrepreneurs trained to build a theory of value before testing it achieved higher economic performance, because they made more coordinated changes to both core and operational parts of their business models.</p>
+        </a>
+        <a class="tile" href="https://doi.org/10.1016/j.respol.2024.105022">
+          <div class="tile-top"><b>Research Policy</b><span>2024</span></div>
+          <h3>Scientific decision-making, project selection and longer-term outcomes</h3>
+          <p class="src">Coali, Gambardella and Novelli</p>
+          <p class="abs">Across two randomised trials with 382 entrepreneurs, those trained in a scientific approach dropped weak projects earlier because they judged project value more accurately. Over five years they generated more ideas and launched more ventures.</p>
+        </a>
+        <a class="tile" href="https://doi.org/10.1016/j.jbvd.2024.100023">
+          <div class="tile-top"><b>Journal of Business Venturing Design</b><span>2024</span></div>
+          <h3>A scientific approach to decision-making: key tools and design principles</h3>
+          <p class="src">Coali, Novelli, Sirigiri and Spina</p>
+          <p class="abs">A practical account of the scientific approach to decisions: tools for theory building and evidence gathering, and design principles for developing new ones.</p>
+        </a>
+        <div class="tile">
+          <div class="tile-top"><b>MIT Press, book chapter</b><span>2026</span></div>
+          <h3>Introducing causal reasoning into entrepreneurial pedagogy and practice</h3>
+          <p class="src">Coali et al., in <i>Bayesian Entrepreneurship</i></p>
+          <p class="abs">How causal reasoning can be taught to entrepreneurs and built into the way they make decisions.</p>
+        </div>
+      </div>
 
       <p class="sub">Working papers, policy and reports</p>
       <ul class="plain">
@@ -334,56 +457,44 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--s
 
   <section class="section" id="media">
     <h2>Talks, media and writing</h2>
-    <ul class="media">
-      <li>
-        <div class="when"><span class="kind">Essay</span>March 2026</div>
-        <div>
-          <h3><a href="https://www.linkedin.com/pulse/ai-democracy-flattening-human-leverage-andrea-coali-q09ke/">AI and democracy: the flattening of human leverage</a></h3>
-          <p class="outlet">LinkedIn</p>
-          <p>AI is beginning to automate judgment, not just tasks. The essay looks at what compressing the value of mid-level skills means for the middle class and for democratic institutions.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when"><span class="kind">Talk</span>November 2025</div>
-        <div>
-          <h3><a href="https://www.repubblica.it/dossier/economia/a-f-live-connettere-il-futuro-la-digitalizzazione-delle-imprese/2025/11/19/video/af_live_digitalizzazione_coali_cerved_group_trasformare_i_dati_in_decisioni_non_in_complessita-424990800/">Trasformare i dati in decisioni, non in complessità</a></h3>
-          <p class="outlet">la Repubblica, A&amp;F Live "Connettere il futuro", Milan (video)</p>
-          <p>On the digitalisation of Italian firms: when data is abundant, what matters is having a method to manage, interpret and select it.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when"><span class="kind">Media</span>April 2025</div>
-        <div>
-          <h3><a href="https://en.ilsole24ore.com/art/how-galileo-helps-companies-innovate-AGZHxIsD">"This is how Galileo helps companies innovate"</a></h3>
-          <p class="outlet">Il Sole 24 Ore</p>
-          <p>Coverage of the Bocconi research on the scientific approach to entrepreneurial decisions, which I co-authored with Alfonso Gambardella and Arnaldo Camuffo.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when"><span class="kind">Interview</span>March 2025</div>
-        <div>
-          <h3><a href="https://www.unibocconi.it/en/news/enterprise-not-just-intuition-science-increases-profits">Enterprise is not just intuition: the science that increases profits</a></h3>
-          <p class="outlet">Bocconi University</p>
-          <p>On our Organization Science study: Tanzanian entrepreneurs who built a theory before testing earned higher revenues and profits, and changed their business models in a more coordinated way.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when"><span class="kind">Article</span>August 2024</div>
-        <div>
-          <h3><a href="https://www.unibocconi.it/en/news/power-theories-decision-making">The power of theories for decision-making</a></h3>
-          <p class="outlet">viaSarfatti25, Bocconi University</p>
-          <p>An account of more than fifteen field experiments with entrepreneurs: developing a theory before experimenting leads to better project selection and higher performance under uncertainty.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when"><span class="kind">Policy</span>July 2020</div>
-        <div>
-          <h3><a href="https://www.bruegel.org/2020/07/eu-recovery-plans-should-fund-the-covid-19-battles-to-come-not-be-used-to-nurse-old-wounds/">EU recovery plans should fund the COVID-19 battles to come; not be used to nurse old wounds</a></h3>
-          <p class="outlet">Bruegel, with Carlo Altomonte and Gianmarco Ottaviano</p>
-          <p>On how EU recovery funds should be allocated after the pandemic.</p>
-        </div>
-      </li>
-    </ul>
+    <div class="tiles">
+      <a class="tile" href="https://www.linkedin.com/pulse/ai-democracy-flattening-human-leverage-andrea-coali-q09ke/">
+        <div class="tile-top"><b>Essay</b><span>March 2026</span></div>
+        <h3>AI and democracy: the flattening of human leverage</h3>
+        <p class="src">LinkedIn</p>
+        <p class="abs">AI is beginning to automate judgment, not just tasks. The essay looks at what compressing the value of mid-level skills means for the middle class and for democratic institutions.</p>
+      </a>
+      <a class="tile" href="https://www.repubblica.it/dossier/economia/a-f-live-connettere-il-futuro-la-digitalizzazione-delle-imprese/2025/11/19/video/af_live_digitalizzazione_coali_cerved_group_trasformare_i_dati_in_decisioni_non_in_complessita-424990800/">
+        <div class="tile-top"><b>Talk</b><span>November 2025</span></div>
+        <h3>Trasformare i dati in decisioni, non in complessità</h3>
+        <p class="src">la Repubblica, A&amp;F Live "Connettere il futuro", Milan (video)</p>
+        <p class="abs">On the digitalisation of Italian firms: when data is abundant, what matters is having a method to manage, interpret and select it.</p>
+      </a>
+      <a class="tile" href="https://en.ilsole24ore.com/art/how-galileo-helps-companies-innovate-AGZHxIsD">
+        <div class="tile-top"><b>Media</b><span>April 2025</span></div>
+        <h3>"This is how Galileo helps companies innovate"</h3>
+        <p class="src">Il Sole 24 Ore</p>
+        <p class="abs">Coverage of the Bocconi research on the scientific approach to entrepreneurial decisions, which I co-authored with Alfonso Gambardella and Arnaldo Camuffo.</p>
+      </a>
+      <a class="tile" href="https://www.unibocconi.it/en/news/enterprise-not-just-intuition-science-increases-profits">
+        <div class="tile-top"><b>Interview</b><span>March 2025</span></div>
+        <h3>Enterprise is not just intuition: the science that increases profits</h3>
+        <p class="src">Bocconi University</p>
+        <p class="abs">On our Organization Science study: Tanzanian entrepreneurs who built a theory before testing earned higher revenues and profits, and changed their business models in a more coordinated way.</p>
+      </a>
+      <a class="tile" href="https://www.unibocconi.it/en/news/power-theories-decision-making">
+        <div class="tile-top"><b>Article</b><span>August 2024</span></div>
+        <h3>The power of theories for decision-making</h3>
+        <p class="src">viaSarfatti25, Bocconi University</p>
+        <p class="abs">An account of more than fifteen field experiments with entrepreneurs: developing a theory before experimenting leads to better project selection and higher performance under uncertainty.</p>
+      </a>
+      <a class="tile" href="https://www.bruegel.org/2020/07/eu-recovery-plans-should-fund-the-covid-19-battles-to-come-not-be-used-to-nurse-old-wounds/">
+        <div class="tile-top"><b>Policy</b><span>July 2020</span></div>
+        <h3>EU recovery plans should fund the COVID-19 battles to come; not be used to nurse old wounds</h3>
+        <p class="src">Bruegel, with Carlo Altomonte and Gianmarco Ottaviano</p>
+        <p class="abs">On how EU recovery funds should be allocated after the pandemic.</p>
+      </a>
+    </div>
   </section>
 
   <section class="section" id="founders">
