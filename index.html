@@ -77,7 +77,8 @@ a:hover { color: var(--navy); text-decoration-color: currentColor; }
 
 /* opening */
 .opening { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 64px; align-items: end; padding: 72px 0 48px; }
-h1 { font-weight: 700; font-size: clamp(3rem, 8vw, 6.25rem); line-height: .95; letter-spacing: -.045em; color: var(--navy); margin: 0 0 28px; }
+h1 { font-weight: 700; font-size: clamp(2.5rem, 5.5vw, 4.25rem); line-height: 1; letter-spacing: -.035em; color: var(--navy); margin: 0 0 10px; white-space: nowrap; }
+.role-line { font-size: 1.25rem; font-weight: 500; color: var(--slate); margin-bottom: 28px; }
 .standfirst { font-size: 1.3rem; line-height: 1.5; max-width: 34em; margin-bottom: 16px; }
 .standfirst + p { color: var(--slate); max-width: 38em; }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
@@ -339,8 +340,9 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--s
 
   <div class="opening">
     <div>
-      <h1>Andrea<br>Coali</h1>
-      <p class="standfirst">Applied economist. I am the Chief Research Scientist at Cerved Group (ION Group) and a Research Fellow at the ION Management Science Lab, SDA Bocconi.</p>
+      <h1>Andrea Coali</h1>
+      <p class="role-line">Applied economist</p>
+      <p class="standfirst">I am the Chief Research Scientist at Cerved Group (ION Group) and a Research Fellow at the ION Management Science Lab, SDA Bocconi.</p>
       <p>At Cerved I lead the research function, from economic studies on Italian firms to the predictive models used in the group's products. My academic work uses randomised field experiments to study decision-making under uncertainty and has appeared in <i>Strategic Management Journal</i>, <i>Organization Science</i> and <i>Research Policy</i>. I hold a PhD from Bocconi University and previously worked in the Economics Department of the European Investment Bank.</p>
       <div class="actions">
         <a class="primary" href="mailto:andrea.coali@gmail.com">Email</a>
